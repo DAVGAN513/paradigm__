@@ -22,3 +22,13 @@ In order to solve this problem we will to create a python script in which we can
 import os
 import shutil
 ```
+This section imports the os module for interacting with the operating system and reading directories and the shutil module for high level file operations like moving files drom one place to another 
+
+```python
+def organize_folder(target_directory):
+    file_types = {
+        "Images": ['.jpg', '.jpeg', '.png', '.gif'],
+        "Documents": ['.pdf', '.docx', '.txt', '.xlsx'],
+        "Videos": ['.mp4', '.mkv', '.mov']
+    }
+```
