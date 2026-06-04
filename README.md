@@ -86,3 +86,27 @@ if __name__ == "__main__":
 This block ensures that the script runs automatically when executed from the terminal, defending the specific directory to be organized and calling the main function
 
 # Testing 
+
+To test this script ypu dont need a complex testing environment or web server, simply execute the script in th eterminal:
+- Initial State:
+  - report.pdf
+  - vacation.jpg
+  - budget.xlsx
+  - meme.png
+  - presentation.mp4
+ 
+```text
+Starting batch organization...
+Moved: report.pdf -> Documents/
+Moved: vacation.jpg -> Images/
+Moved: budget.xlsx -> Documents/
+Moved: meme.png -> Images/
+Moved: presentation.mp4 -> Videos/
+Script finished successfully!
+```
+- Final State:
+
+The files are now messy placed inside the newly created documents, images and videos that have subdirectories, the script successfully automated a manual workflow
+
+# Complexity Analysis
+
