@@ -110,7 +110,13 @@ The files are now messy placed inside the newly created documents, images and vi
 
 # Complexity Analysis
 
-The simplicity of the scripting paradigm also reflects in its computational complexity
+The simplicity of the scripting paradigm also reflects in its computational complexity 
 
 - Time Complexity
-  O(N*M) this script iterates through N files in the directory 
+  O(N*M) this script iterates through N files in the directory, for each file it checkks against M defined extensions in our dictionary, since M is a very small constant the time complexity simplifies to linear O(n)
+  
+- Space Complexity
+  O(1) the script only stores a few strings in memory regardless of how large the actual files are, it doesny load files into RAM to move them meaning the momory footprint remains constant and extremely low
+
+# Refences
+
