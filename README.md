@@ -16,4 +16,9 @@ This model is light relies heavily on native input/output system libraries and e
 # Implementation 
 In order to solve this problem we will to create a python script in which we can take a discorganized target directory and output a neatly organized folder structure for this code we will use the scripting paradigm to execute a sequential procedural workflow to automate the file moving process
 
-- Module Import: 
+- Module Import:
+
+```python
+import os
+import shutil
+```
