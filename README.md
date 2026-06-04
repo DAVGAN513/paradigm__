@@ -110,3 +110,7 @@ The files are now messy placed inside the newly created documents, images and vi
 
 # Complexity Analysis
 
+The simplicity of the scripting paradigm also reflects in its computational complexity
+
+- Time Complexity
+  O(N*M) this script iterates through N files in the directory 
