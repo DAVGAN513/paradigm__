@@ -120,3 +120,6 @@ The simplicity of the scripting paradigm also reflects in its computational comp
 
 # Refences
 
+GeeksforGeeks. (2026, June 3). Introduction of programming paradigms. GeeksforGeeks. https://www.geeksforgeeks.org/system-design/introduction-of-programming-paradigms/
+Važan, R., & Važan, R. (2023, August 6). Scripting as a programming paradigm. Robert’s blog. https://blog.machinezoo.com/Scripting_as_a_programming_paradigm
+Codecademy. (n.d.). How to build a Python Script: A Beginner’s guide to Python Scripting. Codecademy. https://www.codecademy.com/article/python-scripting
