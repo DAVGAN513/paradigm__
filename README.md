@@ -87,26 +87,26 @@ This block ensures that the script runs automatically when executed from the ter
 
 # Testing 
 
-To test this script ypu dont need a complex testing environment or web server, simply execute the script in th eterminal:
-- Initial State:
-  - report.pdf
-  - vacation.jpg
-  - budget.xlsx
-  - meme.png
-  - presentation.mp4
- 
-```text
-Starting batch organization...
-Moved: report.pdf -> Documents/
-Moved: vacation.jpg -> Images/
-Moved: budget.xlsx -> Documents/
-Moved: meme.png -> Images/
-Moved: presentation.mp4 -> Videos/
-Script finished successfully!
-```
-- Final State:
+To validate the scripting paradigm implementation a functional test was conducted on a local directory named messy_ the test was designed to evaluate the scripts ability to dynamically identify file extensions generate appropriate directories, and relocate the files automatically 
 
-The files are now messy placed inside the newly created documents, images and videos that have subdirectories, the script successfully automated a manual workflow
+- Initial State
+This is the before of all, the target directory contains a mix of unorganized files a word document, an excel spreadsheet, and two pdf files
+<img width="1920" height="1080" alt="Captura de pantalla 2026-06-06 155252" src="https://github.com/user-attachments/assets/1e987294-81b2-4a23-8efe-4cd764ca1518" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # Complexity Analysis
 
