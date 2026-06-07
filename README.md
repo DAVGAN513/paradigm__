@@ -105,6 +105,13 @@ This is the before of all, the target directory contains a mix of unorganized fi
 
 
 
+The execution phase is that python script was execute using the VScode integrate terminal the console output successfully traced the automation process, confirming that the script evaluated each file extracted its specific extension and routed it to a newly designated folder
+<img width="1863" height="278" alt="Captura de pantalla 2026-06-07 145222" src="https://github.com/user-attachments/assets/6d26774a-305d-4b6f-baae-e63d3467f1a1" />
+
+
+- Final State
+The after of this execution is that the script successfully created the exact uppercase directories correspinding to the file extension present in the root folder: DOCX, PDF and XLSX all files were accurately sorted into their respective folders validating the efficiency and accuracy of the automation script
+<img width="1902" height="607" alt="image" src="https://github.com/user-attachments/assets/bf28257c-43ea-47cc-90a4-364658e3762a" />
 
 
 
