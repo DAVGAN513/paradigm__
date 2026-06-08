@@ -125,6 +125,72 @@ The simplicity of the scripting paradigm also reflects in its computational comp
 - Space Complexity
   O(1) the script only stores a few strings in memory regardless of how large the actual files are, it doesny load files into RAM to move them meaning the momory footprint remains constant and extremely low
 
+
+# Other implementation
+Another way to solve this file organization problem would be through using C++ instead of python 
+for c++ the main differences would be in the way we interact with os file system using th efilesystem library. 
+In python the interation is handled dynamically using the os module, and strings are sliced natively with built in methods 
+
+```python
+files = os.listdir(target_directory)
+
+for file in files:
+    if os.path.isdir(os.path.join(target_directory, file)):
+        continue
+
+    _, extension = os.path.splitext(file)
+    folder_name = extension.replace(".", "").upper()
+```
+
+C++ uses the std::filesystem namespace wich requires explicit type of checking and manual transformation loops to archieve uppercase formating
+
+```cpp
+#include <filesystem>
+#include <algorithm>
+#include <string>
+
+namespace fs = std::filesystem;
+
+for (const auto& entry : fs::directory_iterator(target_directory)) {
+    if (entry.is_regular_file()) {
+        std::string ext = entry.path().extension().string();
+
+        if (!ext.empty()) {
+            ext.erase(0, 1); // Removes the "." from ".pdf"
+            std::transform(ext.begin(), ext.end(), ext.begin(), ::toupper);
+        }
+    }
+}
+```
+
+Creating folders and moving files in python usues the high level functions from the shutil and os modules to manage directories and recolate files 
+
+```python
+if not os.path.exists(folder_path):
+    os.makedirs(folder_path)
+
+destination_path = os.path.join(folder_path, file)
+shutil.move(file_path, destination_path)
+```
+
+C++ uses filesystem methods like create_directory and relies on reneme to change teh files path that with that effectively moves it
+
+```cpp
+fs::path target_folder = target_directory / ext;
+
+if (!fs::exists(target_folder)) {
+    fs::create_directory(target_folder);
+}
+
+// Moving the file by renaming its absolute path
+fs::rename(entry.path(), target_folder / entry.path().filename());
+```
+
+Both python and c++ have an O(n) time complexity in their algorith where the n represents the number of files inside the folder of the directory, as both programs must iterate through every item exactly once, because of this the simplicity, of the scripting paradigm python offers us a more direct solution that runs more intuitive across any os without compilation, while c++ couls potencially execute the file movement faster, it requires a more complex setup for that is better to use the python script that is more optimal and nature fit for automated os tasks 
+
+
+
+
 # Refences
 
 GeeksforGeeks. (2026, June 3). Introduction of programming paradigms. GeeksforGeeks. https://www.geeksforgeeks.org/system-design/introduction-of-programming-paradigms/
