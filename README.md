@@ -120,7 +120,7 @@ The after of this execution is that the script successfully created the exact up
 The simplicity of the scripting paradigm also reflects in its computational complexity 
 
 - Time Complexity
-  O(N*M) this script iterates through N files in the directory, for each file it checkks against M defined extensions in our dictionary, since M is a very small constant the time complexity simplifies to linear O(n)
+  O(N) the algorithm iterates exactly once through the n files that present in the directory, for each file the operation performed on the extracting of the file extension, formatting the string and checking if the destination folder exists creating it if it neccessary and moving the file are all of this in constant time operations, o(n) scaling directly with the total number of files in the directory
   
 - Space Complexity
   O(1) the script only stores a few strings in memory regardless of how large the actual files are, it doesny load files into RAM to move them meaning the momory footprint remains constant and extremely low
